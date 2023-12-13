@@ -642,7 +642,7 @@ function print_error_02 {
         echo ""
         echo -e "${YELLOW}NOTE: ${NOCOLOR}This automated installer currently supports only the following Linux versions;
 
-> Ubuntu 18.04
+> Ubuntu 22.04
 > CentOS 7
 
 To install Fluky on other Linux versions, please continue with manual installation."
@@ -663,14 +663,14 @@ if [ -f /etc/lsb-release ]; then
     release=$(lsb_release -r)
     vernum=$(cut -f2 <<< "$release")
 
-    # check is it ubuntu 18.04
-    if [ $vernum == 18.04 ]; then
+    # check is it ubuntu 22.04
+    if [ $vernum == 22.04 ]; then
 
         # check zip folder existence
         if [ -f fluky.zip ]; then
 
-            # install fluky on ubuntu 18.04
-            ubuntu_18_04
+            # install fluky on ubuntu 22.04
+            ubuntu_22_04
 
             # remove installation files
             clear
