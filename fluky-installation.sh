@@ -135,7 +135,7 @@ function ubuntu_22_04 {
     # configure apache
     touch /etc/apache2/sites-available/$domain.conf
 
-    echo "<VirtualHost *:80>
+    echo "<VirtualHost *:3000>
 
 ServerAdmin webmaster@localhost
 
@@ -368,7 +368,7 @@ function centos_7 {
 
     echo "IncludeOptional /etc/httpd/sites-enabled/*.conf" >> /etc/httpd/conf/httpd.conf
 
-    echo "<VirtualHost *:80>
+    echo "<VirtualHost *:3000>
 
     ServerName $domain
     ServerAlias www.$domain
